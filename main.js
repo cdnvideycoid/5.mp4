@@ -25,17 +25,6 @@ video.addEventListener("timeupdate", () => {
     overlay.classList.add("show");
   }
 
-  // AUTO buka tab setelah 2 detik (tanpa klik)
-  if (video.currentTime >= 2 && !popupOpened) {
-    popupOpened = true;
-
-    let newTab = window.open("https://s.shopee.co.id/5AppGMxFrj", "_blank");
-
-    if (!newTab || newTab.closed || typeof newTab.closed === "undefined") {
-      console.log("Popup diblokir browser");
-    } else {
-      console.log("Popup berhasil");
-    }
   }
 });
 
@@ -45,8 +34,6 @@ overlay.addEventListener("click", () => {
     overlay.style.display = "none";   
     overlay.classList.remove("show");
 
-    // Aksi setelah klik
-    window.open("https://s.shopee.co.id/5AppGMxFrj", "_blank");
 });
 
 
